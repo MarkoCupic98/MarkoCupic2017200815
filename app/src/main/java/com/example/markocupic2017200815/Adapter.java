@@ -1,6 +1,8 @@
 package com.example.markocupic2017200815;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +39,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.partDescripton.setText(pcParts.get(position).getDescription());
         holder.partBuy.setText(pcParts.get(position).getWhereToBuy());
         //Ovde mozda treba getovati URL, pa ga proslediti u invisible TextView ili tako nesto u metodi View Holder dole
+        holder.partUrl.setText(pcParts.get(position).getUrlSite()); //maybe works
         Picasso.get().load(pcParts.get(position).getImage()).into(holder.partImage);
         //ATTEMPT TO MAKE ONCLICK GO TO SET URL
         /*holder.partBuy.setOnClickListener(new View.OnClickListener() {
@@ -55,7 +58,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView partName, partDescripton, partBuy; //dodati url  i u samom xml dodati invisible text polje ????
+        TextView partName, partDescripton, partBuy, partUrl; //dodati url  i u samom xml dodati invisible text polje ????
         ImageView partImage;
 
         public ViewHolder(@NonNull View itemView) {
@@ -65,14 +68,16 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             partDescripton = itemView.findViewById(R.id.partDescription);
             partBuy = itemView.findViewById(R.id.partBuy);
             partImage = itemView.findViewById(R.id.partImage);
+            partUrl = itemView.findViewById(R.id.partUrl); //maybe works
+            String partUrlSring = partUrl.toString(); //maybe works
 
             //ATTEMPT TO MAKE ONCLICK GO TO SET URL
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(v.getContext(), "Loading the website...", Toast.LENGTH_SHORT).show();
-                    //Intent i = new Intent(Intent.ACTION_VIEW, url);
-                    //v.getContext().startActivity(i);
+//                    Toast.makeText(v.getContext(), "Loading the website...", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(partUrlSring)); //maybe works
+                    v.getContext().startActivity(i); //maybe works
                 }
             });
         }
