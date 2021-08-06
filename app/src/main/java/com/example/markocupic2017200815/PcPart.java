@@ -49,7 +49,7 @@ public class PcPart {
         return urlSite;
     }
 
-    public void setUrlSite(String url) {
+    public void setUrlSite(String urlSite) {
         this.urlSite = urlSite;
     }
 }

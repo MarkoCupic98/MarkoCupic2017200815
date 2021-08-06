@@ -14,4 +14,5 @@
     <string name="customName">Name</string>
     <string name="customDesc">Description</string>
     <string name="customWhere">Where to buy</string>
+    <string name="Url">Url</string>
 </resources>

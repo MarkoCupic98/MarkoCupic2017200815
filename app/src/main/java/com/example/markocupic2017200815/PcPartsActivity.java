@@ -50,11 +50,11 @@ public class PcPartsActivity extends AppCompatActivity {
                         JSONObject pcPartObject = response.getJSONObject(i);
 
                         PcPart pcPart = new PcPart();
-                        pcPart.setName(pcPartObject.getString("name").toString());
-                        pcPart.setDescription(pcPartObject.getString("description").toString());
-                        pcPart.setWhereToBuy(pcPartObject.getString("whereToBuy").toString());
+                        pcPart.setName(pcPartObject.getString("name"));
+                        pcPart.setDescription(pcPartObject.getString("description"));
+                        pcPart.setWhereToBuy(pcPartObject.getString("whereToBuy"));
                         pcPart.setImage(pcPartObject.getString("image"));
-                        pcPart.setUrlSite(pcPartObject.getString("urlsite"));
+                        pcPart.setUrlSite(pcPartObject.getString("urlSite"));
 
                         pcParts.add(pcPart);
 
