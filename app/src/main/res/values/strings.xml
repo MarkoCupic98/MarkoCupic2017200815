@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Čupić Technologies</string>
+    <string name="cp">Techium</string>
+    <string name="fre">Fast ~ Reliable ~ Easy</string>
+    <string name="disp">PC parts at your disposal</string>
+    <string name="buttonlogin">Login</string>
+    <string name="username">Email</string>
+    <string name="hintuser">Enter your email here</string>
+    <string name="password">Password</string>
+    <string name="hintpw">Enter your password here</string>
+    <string name="buttonconfirm">Confirm</string>
+    <string name="buttoncancel">Cancel</string>
+    <string name="contentDesc"> </string>
+    <string name="customName">Name</string>
+    <string name="customDesc">Description</string>
+    <string name="customWhere">Where to buy</string>
+</resources>
